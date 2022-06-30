@@ -7,7 +7,7 @@
   height: 500px;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(0, 0, 0, 0.342);
+  background-color: rgba(0, 0, 0, 0.587);
 
   border: 5px solid;
   border-image: linear-gradient(#ff512f, #dd2476, #1c64ff) 1;
@@ -35,7 +35,7 @@
   justify-content: flex-end;
   /* width: 500px; */
   font-size: 50px;
-  color: #5432a5;
+  color: #8f6ce1;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .header {
