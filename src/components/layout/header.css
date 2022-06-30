@@ -7,7 +7,8 @@
   height: 500px;
   align-items: center;
   justify-content: space-between;
-  background-color: #190c1e;
+  background-color: rgba(0, 0, 0, 0.342);
+
   border: 5px solid;
   border-image: linear-gradient(#ff512f, #dd2476, #1c64ff) 1;
   animation: rotate 2.5s ease-in infinite;
@@ -22,8 +23,19 @@
   display: flex;
   justify-content: flex-end;
   /* width: 500px; */
-  font-size: 80px;
+  font-size: 100px;
   color: #ffffff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.subtitle {
+  margin-top: 0;
+  margin-left: 50px;
+  display: flex;
+  justify-content: flex-end;
+  /* width: 500px; */
+  font-size: 50px;
+  color: #5432a5;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .header {
@@ -37,3 +49,52 @@
   flex-direction: column;
   align-items: flex-start;
 }
+
+/* .welldone span {
+  --total: calc(var(--duration) + var(--delay));
+  position: relative;
+  display: block;
+  color: transparent;
+  overflow: hidden;
+  animation: revealText 1s var(--total) forwards;
+}
+
+.welldone span::ofter {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #bb93fc;
+  animation: rollIn var(--duration) var(--delay) forwards,
+    rollOut var(--duration) var(--total) forwards;
+}
+
+.welldone span:nth-child(2) ::after {
+  border-top: 3px solid #896ab9;
+}
+
+@keyframes revealText {
+  to {
+    color: #fff;
+  }
+}
+@keyframes rollIn {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes rollOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(105%);
+  }
+} */

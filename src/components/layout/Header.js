@@ -6,8 +6,12 @@ function Header() {
     <header className="card">
       {/* <div className="header"> */}
       <div className="welldone">
-        <h1 className="title">Welldone</h1>
-        <h3 className="title">Stay curious.</h3>
+        <span className="title">
+          <i>Welldone</i>
+        </span>
+        <h3 className="subtitle">
+          <i>Stay curious..</i>
+        </h3>
       </div>
 
       <Button />
