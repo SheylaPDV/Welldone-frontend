@@ -12,7 +12,7 @@ export default function ArticulesList () {
        })
         .then(response => response.json())
         .then(data => setArticules(data.result))
-    })
+    }, [])
 
     return <>
         <h1>Articules</h1>
