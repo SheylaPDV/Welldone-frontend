@@ -1,25 +1,32 @@
-import { useEffect, useState } from "react";
 import "./LoginPage.css";
-export default function LoginPage() {
-  return (
-    <>
-      <h2 className="loginPage-title">Log in to Welldone</h2>
-      <form className="loginForm">
-        <input className="loginForm-field" name="email" />
-        <input
-          className="loginForm-field"
-          //   className="formField-label"
-          type="password"
-          name="password"
-        />
+import React from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { login } from "./service";
+import useMutation from "../../hooks/useMutation";
+import { useAuth } from "./context";
+import LoginForm from "./LoginForm";
 
-        <input type="checkbox" name="remember" />
-        <label>Remember password</label>
-        <button className="loginForm-submit">Login</button>
-        <a href="/LoginHelp">
-          <h5>Need help?</h5>
-        </a>
-      </form>
-    </>
+function LoginPage() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const { handleLogin } = useAuth();
+  const { isLoading, error, execute, resetError } = useMutation(login);
+
+  const handleSubmit = (credentials) => {
+    execute(credentials)
+      .then(handleLogin)
+      .then(() => {
+        const from = location.state?.from?.pathname || "/";
+        navigate(from, { replace: true });
+      });
+  };
+
+  return (
+    <div>
+      <LoginForm onSubmit={handleSubmit} />
+      {isLoading && <p>Welldone..</p>}
+      {error && <div onClick={resetError}>{error.message}</div>}
+    </div>
   );
 }
+export default LoginPage;
