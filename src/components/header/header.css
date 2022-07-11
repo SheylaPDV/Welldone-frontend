@@ -8,7 +8,15 @@
 .title-header {
   color: rgb(18, 68, 9);
   font-size: 50px;
-  margin-left: 5%;
+  margin-left: 10%;
+  margin-bottom: 0;
+}
+.title-header2 {
+  color: rgb(18, 68, 9);
+  font-size: 30px;
+  margin-left: 10%;
+  width: 500px;
+  margin-top: 0;
 }
 .button-login {
   background-color: darkkhaki;

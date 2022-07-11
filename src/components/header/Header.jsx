@@ -8,6 +8,9 @@ function Header({ className }) {
         <h1 className="title-header">
           <i>Welldone</i>
         </h1>
+        <h3 className="title-header2">
+          <i>Stay cursious..</i>
+        </h3>
       </NavLink>
 
       <nav className="header-nav">
