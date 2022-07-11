@@ -1,4 +1,5 @@
 import useForm from "../../hooks/useForm";
+import "../header/header.css";
 
 const validEmail = ({ email }) => email;
 const validPassword = ({ password }) => password;
@@ -18,30 +19,47 @@ function LoginForm({ onSubmit }) {
   const { username, email, password, remember } = credentials;
 
   return (
-    <div>
+    <div className="loginPage">
       <h2 className="loginPage-title">Log in to Welldone</h2>
       <form className="loginForm" onSubmit={handleSubmit(onSubmit)}>
+        <label className="label-input">Email</label>
+        <div className="input-group">
+          <input
+            className="input"
+            placeholder="email"
+            name="email"
+            value={email}
+            onChange={handleChange}
+          />
+          <span className="border"></span>
+        </div>
+
+        <label className="label-input">Username</label>
+        <div className="input-group">
+          <input
+            className="input"
+            name="username"
+            value={username}
+            onChange={handleChange}
+          />
+          <span className="border"></span>
+        </div>
+
+        <label className="label-input">Password</label>
+        <div className="input-group">
+          <input
+            className="input"
+            type="password"
+            name="password"
+            value={password}
+            onChange={handleChange}
+          />
+          <span className="border"></span>
+        </div>
+
+        <label className="label-input">Remember password</label>
         <input
-          className="loginForm-field"
-          name="email"
-          value={email}
-          onChange={handleChange}
-        />
-        <input
-          className="loginForm-field"
-          name="username"
-          value={username}
-          onChange={handleChange}
-        />
-        <input
-          className="loginForm-field"
-          type="password"
-          name="password"
-          value={password}
-          onChange={handleChange}
-        />
-        <label>Remember password</label>
-        <input
+          className="label-input"
           type="checkbox"
           name="remember"
           checked={remember}
@@ -49,7 +67,7 @@ function LoginForm({ onSubmit }) {
         />
 
         <button
-          className="loginForm-submit"
+          className="button-login"
           disabled={!validate(validEmail, validPassword)}
         >
           Login

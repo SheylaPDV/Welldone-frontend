@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import ArticulesList from "./components/articules/articulesList/ArticulesList.jsx";
+import Header from "./components/header/Header.jsx";
 import { AuthContextProvider } from "./components/login/context.js";
 import LoginPage from "./components/login/LoginPage.jsx";
 
-function App({ isInitiallyLogged }) {
+function App({ isInitiallyLogged, className }) {
   const [isLogged, setIsLogged] = useState(isInitiallyLogged);
 
   const handleLogin = () => {
@@ -15,7 +16,7 @@ function App({ isInitiallyLogged }) {
   };
   return (
     <div className="App">
-      <h1>Hello World, Hello compis</h1>
+      <Header />
       <AuthContextProvider value={{ isLogged, handleLogin, handleLogout }}>
         <Routes>
           <Route path="/" element={<Navigate to="/articules" />}></Route>
