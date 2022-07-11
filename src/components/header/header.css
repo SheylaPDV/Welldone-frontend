@@ -1,0 +1,41 @@
+.Header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.title-header {
+  color: rgb(18, 68, 9);
+  font-size: 50px;
+  margin-left: 10%;
+  margin-bottom: 0;
+}
+.title-header2 {
+  color: rgb(18, 68, 9);
+  font-size: 30px;
+  margin-left: 10%;
+  width: 500px;
+  margin-top: 0;
+}
+.button-login {
+  background-color: darkkhaki;
+  border-radius: 10px;
+  width: 130px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+a {
+  text-decoration: none;
+}

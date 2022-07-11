@@ -3,10 +3,60 @@
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
+  width: 50%;
 }
 
 .loginForm {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.label-input {
+  margin-top: 20px;
+}
+.loginPage {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 30px;
+  align-items: center;
+  margin-right: 25%;
+  margin-left: 25%;
+  font-size: 20px;
+  background-color: rgba(234, 242, 10, 0.1);
+}
+.input-group {
+  position: relative;
+}
+.input {
+  font: inherit;
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  outline: none;
+  padding-block: 5px;
+}
+.input::placeholder {
+  color: inherit;
+  transition: opacity 0.25%;
+}
+.input:focus::placeholder {
+  opacity: 0;
+}
+.border {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fbff00;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25%;
+}
+
+.input:focus + .border,
+.input:valid + .border {
+  transform: scaleX(1);
 }

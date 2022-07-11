@@ -1,4 +1,4 @@
-import "./LoginPage.css";
+import "./loginPage.css";
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { login } from "./service";
