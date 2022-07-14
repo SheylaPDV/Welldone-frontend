@@ -1,0 +1,8 @@
+.articule-box {
+  display: flex;
+  background-color: rgb(244, 236, 90);
+  flex-direction: column;
+  font-size: 10px;
+  height: 700px;
+  align-items: center;
+}

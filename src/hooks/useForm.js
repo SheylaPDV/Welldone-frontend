@@ -1,14 +1,9 @@
 import { useState } from "react";
 
 const getValueByType = {
-  checkbox: ({ checked }) => checked,
+  email: ({ value }) => value,
 
-  number: ({ value }) => Number(value),
-
-  "select-multiple": ({ selectedOptions }) =>
-    [...selectedOptions].map(({ value }) => value),
-
-  file: ({ files }) => files[0] || null,
+  password: ({ value }) => value,
 };
 
 const defaultGetValue = ({ value }) => value;
@@ -25,7 +20,7 @@ function useForm(initialFormValue) {
 
   const handleChange = (ev) => {
     console.log("handlechange", ev);
-    const valueGetter = getValueByType[ev.target.type] || defaultGetValue;
+    const valueGetter = getValueByType[ev.target.name] || defaultGetValue;
     updateFormValue(ev.target.name, valueGetter(ev.target));
   };
 
