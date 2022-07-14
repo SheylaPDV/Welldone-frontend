@@ -26,7 +26,6 @@ function LoginForm({ onSubmit }) {
         <div className="input-group">
           <input
             className="input"
-            placeholder="email"
             name="email"
             value={email}
             onChange={handleChange}

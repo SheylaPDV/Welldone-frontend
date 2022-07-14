@@ -8,6 +8,9 @@ export const login = ({ ...credentials }) => {
   });
 };
 
-export const createUser = withFormData((newUser) => {
+// export const createUser = async ((newUser) => {
+//   return client.post("/v1/user", newUser);
+// });
+export const createUser = async (newUser) => {
   return client.post("/v1/user", newUser);
-});
+};

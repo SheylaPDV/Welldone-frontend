@@ -4,7 +4,7 @@ import ArticulesList from "./components/articules/articulesList/ArticulesList.js
 import Footer from "./components/layout/footer/Footer.jsx";
 import Header from "./components/layout/header/Header.jsx";
 import { AuthContextProvider } from "./components/login/context.js";
-import CreateUser from "./components/login/CreateUserPage.jsx";
+import CreateUserPage from "./components/login/CreateUserPage.jsx";
 import LoginPage from "./components/login/LoginPage.jsx";
 
 function App({ isInitiallyLogged, className }) {
@@ -25,7 +25,7 @@ function App({ isInitiallyLogged, className }) {
           <Route path="/articules">
             <Route index element={<ArticulesList></ArticulesList>}></Route>
           </Route>
-          <Route path="/createAccount" element={<CreateUser />} />
+          <Route path="/createAccount" element={<CreateUserPage />} />
           <Route path="/login" element={<LoginPage />} />
 
           <Route path="/404" element={<div> 404 | Not found Page</div>}></Route>

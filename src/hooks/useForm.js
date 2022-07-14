@@ -20,7 +20,7 @@ function useForm(initialFormValue) {
 
   const handleChange = (ev) => {
     console.log("handlechange", ev);
-    const valueGetter = getValueByType[ev.target.type] || defaultGetValue;
+    const valueGetter = getValueByType[ev.target.name] || defaultGetValue;
     updateFormValue(ev.target.name, valueGetter(ev.target));
   };
 
