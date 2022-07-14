@@ -1,5 +1,5 @@
 import useForm from "../../hooks/useForm";
-import "../header/header.css";
+import "../layout/header/header.css";
 
 const validEmail = ({ email }) => email;
 const validPassword = ({ password }) => password;
@@ -72,6 +72,9 @@ function LoginForm({ onSubmit }) {
         >
           Login
         </button>
+        <a href="/createAccount">
+          <h5>No account? Create one</h5>
+        </a>
         <a href="/LoginHelp">
           <h5>Need help?</h5>
         </a>

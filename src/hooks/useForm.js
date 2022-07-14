@@ -1,14 +1,9 @@
 import { useState } from "react";
 
 const getValueByType = {
-  checkbox: ({ checked }) => checked,
+  email: ({ value }) => value,
 
-  number: ({ value }) => Number(value),
-
-  "select-multiple": ({ selectedOptions }) =>
-    [...selectedOptions].map(({ value }) => value),
-
-  file: ({ files }) => files[0] || null,
+  password: ({ value }) => value,
 };
 
 const defaultGetValue = ({ value }) => value;

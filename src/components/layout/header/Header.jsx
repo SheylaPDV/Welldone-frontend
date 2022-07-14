@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import "./header.css";
 
-function Header({ className }) {
+function Header() {
   return (
     <header className="Header">
       <NavLink to="/">
@@ -17,9 +17,9 @@ function Header({ className }) {
         <NavLink to="/login">
           <button className="button-login">Login</button>
         </NavLink>
-        <NavLink to="/adverts/blog">
+        {/* <NavLink to="/adverts/blog">
           <button className="button-login">create Account</button>
-        </NavLink>
+        </NavLink> */}
       </nav>
     </header>
   );
