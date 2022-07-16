@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
+import LogoutButton from "../../login/LogoutButton";
 import "./header.css";
 
 function Header() {
@@ -14,14 +15,18 @@ function Header() {
       </NavLink>
 
       <nav className="header-nav">
-        <NavLink to="/login">
-          <button className="button">Login</button>
-        </NavLink>
+
         <NavLink to="/new-articule">
           <button className="button">Create Articule</button>
         </NavLink>
+
+        {/* <NavLink to="/login">
+          <button className="button">Login</button>
+        </NavLink> */}
+        <LogoutButton className="button" />
+
         {/* <NavLink to="/adverts/blog">
-          <button className="button-login">create Account</button>
+          <button className="button">create Account</button>
         </NavLink> */}
       </nav>
     </header>
