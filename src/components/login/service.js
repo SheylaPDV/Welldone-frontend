@@ -1,16 +1,21 @@
 import client, { setAuthorizationHeader } from "../../api/client";
-import { withFormData } from "../../utils/withFormData";
+import storage from "../../utils/storage";
 
-export const login = ({ ...credentials }) => {
-  return client.post("/v1/auth", credentials).then(({ accessToken }) => {
-    setAuthorizationHeader(accessToken);
-    return accessToken;
-  });
+export const login = ({ remember, ...credentials }) => {
+  return client
+    .post(`/v1/auth`, credentials)
+    .then(({ accessToken }) => {
+      setAuthorizationHeader(accessToken);
+      return accessToken;
+    })
+    .then((accessToken) => {
+      storage.remove("auth");
+      if (remember) {
+        storage.set("auth", accessToken);
+      }
+    });
 };
 
-// export const createUser = async ((newUser) => {
-//   return client.post("/v1/user", newUser);
-// });
 export const createUser = async (newUser) => {
   return client.post("/v1/user", newUser);
 };
