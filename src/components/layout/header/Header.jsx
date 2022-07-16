@@ -15,7 +15,10 @@ function Header() {
 
       <nav className="header-nav">
         <NavLink to="/login">
-          <button className="button-login">Login</button>
+          <button className="button">Login</button>
+        </NavLink>
+        <NavLink to="/new-articule">
+          <button className="button">Create Articule</button>
         </NavLink>
         {/* <NavLink to="/adverts/blog">
           <button className="button-login">create Account</button>
