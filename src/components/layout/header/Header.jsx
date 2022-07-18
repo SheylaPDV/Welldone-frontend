@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import LogoutButton from "../../login/LogoutButton";
+import LogoutButton from "../../login/auth/LogoutButton";
 import "./header.css";
 
 function Header() {
