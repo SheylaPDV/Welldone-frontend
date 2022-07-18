@@ -24,7 +24,8 @@ export const getUsers = async () => {
 };
 
 export const getUserId = async (userId) => {
-  return client.get(`/v1/user/"${userId}`);
+  console.log("getUserId", userId);
+  return client.get(`/v1/user/${userId}`);
 };
 
 export const createUser = async (newUser) => {
