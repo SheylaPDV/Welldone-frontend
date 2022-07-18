@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Articule from "./Articule";
-import { getLastedArticules } from "./service";
+import { getLastedArticules } from "../service";
 import "./articule.css";
 export default function ArticulesList() {
   const [articules, setArticules] = useState([]);
