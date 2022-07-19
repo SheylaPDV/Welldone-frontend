@@ -5,6 +5,7 @@ import { useAuth } from "./context";
 import { getUserId, getUsers } from "./service";
 import UpdateUserForm from "./UpdateUserForm";
 import jwt_decode from "jwt-decode";
+
 export default function UpdateUserPage() {
   const [users, setUsers] = useState([]);
 
@@ -12,20 +13,17 @@ export default function UpdateUserPage() {
   var decoded = jwt_decode(token);
   const { id } = decoded;
 
-  console.log(id);
   useEffect(() => {
     getUserId(id).then((data) => {
       setUsers(data);
     });
   }, [id]);
 
-  console.log(users);
-
   return (
     <>
       <div>
         <h1>Usuarios</h1>
-        {users ? <UpdateUserForm user={users} /> : <h1>No hay usuarios</h1>}
+        {users ? <UpdateUserForm user={users} /> : <h1>There are no users</h1>}
       </div>
     </>
   );

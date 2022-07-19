@@ -20,20 +20,19 @@ export const login = ({ remember, ...credentials }) => {
 };
 
 export const getUsers = async () => {
-  return client.get("/v1/user");
+  return client.get("/v1/users");
 };
 
 export const getUserId = async (userId) => {
-  console.log("getUserId", userId);
-  return client.get(`/v1/user/${userId}`);
+  return client.get(`/v1/users/${userId}`);
 };
 
 export const createUser = async (newUser) => {
-  return client.post("/v1/user", newUser);
+  return client.post("/v1/users", newUser);
 };
 
 export const modifyUser = async () => {
-  const url = "/v1/user/modify-client";
+  const url = "/v1/users/modify-client";
   return client.post(url);
 };
 

@@ -73,8 +73,9 @@ function CreateUserForm({ onSubmit }) {
         />
         <span className="border"></span>
       </div>
-
-      <button className="button-login">Create Account</button>
+      <a href="/createdAccount">
+        <button className="button-login">Create Account</button>
+      </a>
 
       <a href="/LoginHelp">
         <h5>Need help?</h5>

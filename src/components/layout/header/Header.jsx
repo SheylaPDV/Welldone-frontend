@@ -5,7 +5,10 @@ import "./header.css";
 function Header() {
   return (
     <header className="Header">
-      <NavLink to="/">
+      <NavLink
+        to="/"
+        style={({ isActive }) => (isActive ? { color: "green" } : null)}
+      >
         <h1 className="title-header">
           <i>Welldone</i>
         </h1>
@@ -15,13 +18,7 @@ function Header() {
       </NavLink>
 
       <nav className="header-nav">
-        {/* <NavLink to="/login">
-          <button className="button-login">Login</button>
-        </NavLink> */}
         <LogoutButton className="button-login" />
-        {/* <NavLink to="/adverts/blog">
-          <button className="button-login">create Account</button>
-        </NavLink> */}
       </nav>
     </header>
   );

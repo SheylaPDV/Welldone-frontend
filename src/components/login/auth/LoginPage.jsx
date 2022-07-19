@@ -25,7 +25,7 @@ function LoginPage() {
     <div>
       <LoginForm onSubmit={handleSubmit} />
       {isLoading && <p>Welldone..</p>}
-      {error && <div onClick={resetError}>{error.message}</div>}
+      {error && <div onClick={resetError}>{"Invalid email or username"}</div>}
     </div>
   );
 }
