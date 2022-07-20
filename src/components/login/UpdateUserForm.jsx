@@ -17,7 +17,7 @@ export default function UpdateUserForm({ user, onSubmit }) {
     <>
       <form onSubmit={handleSubmit(onSubmit)} className="loginPage">
         <h4>Name:</h4>
-        <label>{user.surname}</label>
+        <label>{user.name}</label>
 
         <input onChange={handleChange} name="name" value={name}></input>
 
@@ -26,12 +26,12 @@ export default function UpdateUserForm({ user, onSubmit }) {
         <input onChange={handleChange} name="surname" value={surname}></input>
 
         <h4>Username:</h4>
-        <label>{user.surname}</label>
+        <label>{user.username}</label>
 
         <input onChange={handleChange} name="username" value={username}></input>
 
         <h4>Email:</h4>
-        <label>{user.surname}</label>
+        <label>{user.email}</label>
 
         <input onChange={handleChange} name="email" value={email}></input>
 
