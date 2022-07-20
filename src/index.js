@@ -3,9 +3,11 @@ import ReactDOM from "react-dom/client";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App";
+
 import { BrowserRouter } from "react-router-dom";
 import { setAuthorizationHeader } from "./api/client";
 import storage from "./utils/storage";
+import "./i18n/index";
 
 const accessToken = storage.get("auth");
 setAuthorizationHeader(accessToken);

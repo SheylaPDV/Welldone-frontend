@@ -3,8 +3,11 @@ import { logout } from "./service";
 import useMutation from "../../hooks/useMutation";
 import { AuthContextConsumer, useAuth } from "./context";
 import "../layout/header/header.css";
+import { useTranslation } from "react-i18next";
 
 function LogoutButton({ className }) {
+  const { t } = useTranslation();
+
   const { isLogged, handleLogout } = useAuth();
   const mutation = useMutation(logout);
   const handleLogoutClick = async () => {
@@ -15,12 +18,12 @@ function LogoutButton({ className }) {
   return isLogged ? (
     <NavLink to="/login">
       <button className={className} onClick={handleLogoutClick}>
-        Logout
+        {t("logout.button")}
       </button>
     </NavLink>
   ) : (
     <NavLink to="/login">
-      <button className={className}>Login</button>
+      <button className={className}>{t("login.button")}</button>
     </NavLink>
   );
 }
