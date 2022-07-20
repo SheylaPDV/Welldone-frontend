@@ -18,7 +18,18 @@ function Header() {
       </NavLink>
 
       <nav className="header-nav">
-        <LogoutButton className="button-login" />
+        <NavLink to="/new-articule">
+          <button className="button">Create Articule</button>
+        </NavLink>
+
+        {/* <NavLink to="/login">
+          <button className="button">Login</button>
+        </NavLink> */}
+        <LogoutButton className="button" />
+
+        {/* <NavLink to="/adverts/blog">
+          <button className="button">create Account</button>
+        </NavLink> */}
       </nav>
     </header>
   );
