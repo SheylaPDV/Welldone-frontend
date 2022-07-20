@@ -1,30 +1,48 @@
-export default function UpdateUserForm({ user }) {
+import useForm from "../../hooks/useForm";
+
+export default function UpdateUserForm({ user, onSubmit }) {
+  const {
+    formValue: modifyUser,
+    handleChange,
+    handleSubmit,
+  } = useForm({
+    name: "",
+    surname: "",
+    username: "",
+    email: "",
+    password: "",
+  });
+  const { name, surname, username, email, password } = modifyUser;
   return (
     <>
-      <div className="articule-box">
-        <label>Name:</label>
-        <input name="name" value={user.name}></input>
+      <form onSubmit={handleSubmit(onSubmit)} className="loginPage">
+        <h4>Name:</h4>
+        <label>{user.surname}</label>
 
-        <label>Surname:</label>
+        <input onChange={handleChange} name="name" value={name}></input>
 
-        <input name="surname" value={user.surname}></input>
+        <h4>Surname:</h4>
+        <label>{user.surname}</label>
+        <input onChange={handleChange} name="surname" value={surname}></input>
 
-        <label>Username:</label>
+        <h4>Username:</h4>
+        <label>{user.surname}</label>
 
-        <input name="username" value={user.username}></input>
+        <input onChange={handleChange} name="username" value={username}></input>
 
-        <label>Email:</label>
+        <h4>Email:</h4>
+        <label>{user.surname}</label>
 
-        <input name="email" value={user.email}></input>
+        <input onChange={handleChange} name="email" value={email}></input>
 
-        <label>Old Password:</label>
+        <h4>Old Password:</h4>
 
-        <input name="password"></input>
-        <label>New Password:</label>
+        {/* <input onChange={handleChange} name="password"></input>
+        <h4>New Password:</h4>
 
-        <input name="password"></input>
-        <button>Edit</button>
-      </div>
+        <input onChange={handleChange} name="password"></input> */}
+        <button onClick={handleChange}>Edit</button>
+      </form>
     </>
   );
 }

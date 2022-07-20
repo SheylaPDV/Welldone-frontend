@@ -11,7 +11,7 @@ function CreateUserPage() {
 
   const handleSubmit = (credentials) => {
     execute(credentials).then(() => {
-      const from = location.state?.from?.pathname || "/createBlog";
+      const from = location.state?.from?.pathname || "/";
       navigate(from, { replace: true });
     });
   };
@@ -20,7 +20,7 @@ function CreateUserPage() {
     <div>
       <CreateUserForm onSubmit={handleSubmit} />
       {isLoading && <p>Welldone..</p>}
-      {error && <div onClick={resetError}>{error.message}</div>}
+      {error && <div onClick={resetError}>{"Invalid credentials"}</div>}
     </div>
   );
 }
