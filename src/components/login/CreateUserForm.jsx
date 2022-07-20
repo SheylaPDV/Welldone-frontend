@@ -1,6 +1,8 @@
+import { useTranslation } from "react-i18next";
 import useForm from "../../hooks/useForm";
 
 function CreateUserForm({ onSubmit }) {
+  const { t } = useTranslation();
   const {
     formValue: newUser,
     handleChange,
@@ -16,8 +18,8 @@ function CreateUserForm({ onSubmit }) {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="loginPage">
-      <h2 className="loginPage-title">Sign Up for WellDone</h2>
-      <label className="label-input">Name</label>
+      <h2 className="loginPage-title">{t("createuser.title")}</h2>
+      <label className="label-input">{t("createuser.name")}</label>
       <div className="input-group">
         <input
           className="input"
@@ -28,7 +30,7 @@ function CreateUserForm({ onSubmit }) {
         <span className="border"></span>
       </div>
 
-      <label className="label-input">Surname</label>
+      <label className="label-input">{t("createuser.surname")}</label>
       <div className="input-group">
         <input
           className="input"
@@ -38,7 +40,7 @@ function CreateUserForm({ onSubmit }) {
         />
         <span className="border"></span>
       </div>
-      <label className="label-input">Username</label>
+      <label className="label-input">{t("createuser.username")}</label>
 
       <div className="input-group">
         <input
@@ -49,7 +51,7 @@ function CreateUserForm({ onSubmit }) {
         />
         <span className="border"></span>
       </div>
-      <label className="label-input">Email</label>
+      <label className="label-input">{t("createuser.email")}</label>
       <div className="input-group">
         <input
           className="input"
@@ -61,7 +63,7 @@ function CreateUserForm({ onSubmit }) {
         <span className="border"></span>
       </div>
 
-      <label className="label-input">Password</label>
+      <label className="label-input">{t("createuser.password")}</label>
 
       <div className="input-group">
         <input
@@ -74,10 +76,10 @@ function CreateUserForm({ onSubmit }) {
         <span className="border"></span>
       </div>
 
-      <button className="button-login">Create Account</button>
+      <button className="button-login">{t("createuser.create-account")}</button>
 
       <a href="/LoginHelp">
-        <h5>Need help?</h5>
+        <h5> {t("createuser.help2")}</h5>
       </a>
     </form>
   );

@@ -1,23 +1,38 @@
+import { t } from "i18next";
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Link, NavLink } from "react-router-dom";
+import i18n from "../../../i18n";
 import LogoutButton from "../../login/LogoutButton";
 import "./header.css";
 
 function Header() {
+  const { t } = useTranslation();
+
+  const [language, setLanguage] = useState("es");
+  const onChangeLanguage = () => {
+    i18n.changeLanguage(language);
+    if (language === "es") {
+      setLanguage("en");
+    } else {
+      setLanguage("es");
+    }
+  };
   return (
     <header className="Header">
       <NavLink to="/">
         <h1 className="title-header">
-          <i>Welldone</i>
+          <i>{t("header.welldone")}</i>
         </h1>
         <h3 className="title-header2">
-          <i>Stay cursious..</i>
+          <i>{t("header.stay-curious")}</i>
         </h3>
       </NavLink>
+      <button onClick={onChangeLanguage}>EN/ES</button>
 
       <nav className="header-nav">
-
         <NavLink to="/new-articule">
-          <button className="button">Create Articule</button>
+          <button className="button">{t("header.create-article")}</button>
         </NavLink>
 
         {/* <NavLink to="/login">

@@ -1,10 +1,12 @@
 import useForm from "../../hooks/useForm";
 import "../layout/header/header.css";
+import { useTranslation } from "react-i18next";
 
 const validEmail = ({ email }) => email;
 const validPassword = ({ password }) => password;
 
 function LoginForm({ onSubmit }) {
+  const { t } = useTranslation();
   const {
     formValue: credentials,
     handleChange,
@@ -20,9 +22,9 @@ function LoginForm({ onSubmit }) {
 
   return (
     <div className="loginPage">
-      <h2 className="loginPage-title">Log in to Welldone</h2>
+      <h2 className="loginPage-title">{t("login.login-to-welldone")}</h2>
       <form className="loginForm" onSubmit={handleSubmit(onSubmit)}>
-        <label className="label-input">Email</label>
+        <label className="label-input">{t("login.email")}</label>
         <div className="input-group">
           <input
             className="input"
@@ -33,7 +35,7 @@ function LoginForm({ onSubmit }) {
           <span className="border"></span>
         </div>
 
-        <label className="label-input">Username</label>
+        <label className="label-input">{t("login.username")}</label>
         <div className="input-group">
           <input
             className="input"
@@ -44,7 +46,7 @@ function LoginForm({ onSubmit }) {
           <span className="border"></span>
         </div>
 
-        <label className="label-input">Password</label>
+        <label className="label-input">{t("login.password")}</label>
         <div className="input-group">
           <input
             className="input"
@@ -56,7 +58,7 @@ function LoginForm({ onSubmit }) {
           <span className="border"></span>
         </div>
 
-        <label className="label-input">Remember password</label>
+        <label className="label-input">{t("login.remember-password")}</label>
         <input
           className="label-input"
           type="checkbox"
@@ -69,13 +71,13 @@ function LoginForm({ onSubmit }) {
           className="button-login"
           disabled={!validate(validEmail, validPassword)}
         >
-          Login
+          {t("login.login")}
         </button>
         <a href="/createAccount">
-          <h5>No account? Create one</h5>
+          <h5>{t("login.create-account")}</h5>
         </a>
         <a href="/LoginHelp">
-          <h5>Need help?</h5>
+          <h5>{t("login.help")}</h5>
         </a>
       </form>
     </div>

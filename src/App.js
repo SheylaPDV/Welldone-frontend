@@ -7,7 +7,6 @@ import Header from "./components/layout/header/Header.jsx";
 import { AuthContextProvider } from "./components/login/context.js";
 import CreateUserPage from "./components/login/CreateUserPage.jsx";
 import LoginPage from "./components/login/LoginPage.jsx";
-
 function App({ isInitiallyLogged }) {
   const [isLogged, setIsLogged] = useState(isInitiallyLogged);
 
@@ -26,7 +25,7 @@ function App({ isInitiallyLogged }) {
           <Route path="/articules">
             <Route index element={<ArticulesList></ArticulesList>}></Route>
           </Route>
-          <Route path="/new-articule" element={<NewArticulePage/>}></Route>
+          <Route path="/new-articule" element={<NewArticulePage />}></Route>
           <Route path="/createAccount" element={<CreateUserPage />} />
           <Route path="/login" element={<LoginPage onLogin={handleLogin} />} />
 
