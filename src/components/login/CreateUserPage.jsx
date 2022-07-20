@@ -3,6 +3,7 @@ import CreateUserForm from "./CreateUserForm";
 import { useLocation, useNavigate } from "react-router-dom";
 import useMutation from "../../hooks/useMutation";
 import { createUser } from "./service";
+import "../login/auth/loginPage.css";
 
 function CreateUserPage() {
   const location = useLocation();

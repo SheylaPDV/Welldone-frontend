@@ -1,5 +1,6 @@
 import useForm from "../../../hooks/useForm";
 import "../../layout/header/header.css";
+import "./loginPage.css";
 
 const validEmail = ({ email }) => email;
 const validPassword = ({ password }) => password;
@@ -66,7 +67,7 @@ function LoginForm({ onSubmit }) {
         />
 
         <button
-          className="button-login"
+          className="button"
           disabled={!validate(validEmail, validPassword)}
         >
           Login

@@ -32,10 +32,10 @@ export const createUser = async (newUser) => {
 };
 
 export const modifyUser = async () => {
-  const url = "/v1/users/modify-client";
-  return client.post(url);
-};
+  const url = `/v1/users`;
 
+  return client.put(url);
+};
 export const logout = () => {
   return Promise.resolve().then(() => {
     removeAuthorizationHeader();
