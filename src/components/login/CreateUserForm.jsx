@@ -77,10 +77,9 @@ function CreateUserForm({ onSubmit }) {
         <span className="border"></span>
       </div>
       <a href="/createdAccount">
-        <button className="button">Create Account</button>
+        {" "}
+        <button className="button">{t("createuser.create-account")}</button>
       </a>
-
-      <button className="button-login">{t("createuser.create-account")}</button>
 
       <a href="/LoginHelp">
         <h5> {t("createuser.help2")}</h5>
