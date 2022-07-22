@@ -1,0 +1,23 @@
+{
+  "login.email": "Email ",
+  "header.welldone": "WellDone ",
+  "header.stay-curious": "Stay curious.. ",
+  "header.create-article": "Create article ",
+  "login.login-to-welldone": "Log in to WellDone.. ",
+  "login.username": "Username ",
+  "login.password": "Password ",
+  "login.remember-password": "Remember password ",
+  "login.login": "Login ",
+  "login.create-account": "No account? Create one ",
+  "login.help": "Need help? ",
+  "createuser.title": "Sign up for WellDone ",
+  "createuser.name": "Name ",
+  "createuser.surname": "Surname ",
+  "createuser.username": "Username ",
+  "createuser.email": "Email ",
+  "createuser.password": "Password ",
+  "createuser.create-account": "Create account ",
+  "createuser.help2": "Need help? ",
+  "login.button": "Login ",
+  "logout.button": "Logout "
+}
