@@ -31,10 +31,8 @@ export const createUser = async (newUser) => {
   return client.post("/v1/users", newUser);
 };
 
-export const modifyUser = async () => {
-  const url = `/v1/users`;
-
-  return client.put(url);
+export const modifyUser = async (modify) => {
+  return client.put("/v1/users", modify);
 };
 export const logout = () => {
   return Promise.resolve().then(() => {

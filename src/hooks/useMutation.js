@@ -8,6 +8,7 @@ function useMutation(mutation) {
 
   const execute = useCallback(
     async function (...args) {
+      console.log("..args", ...args);
       const startExecution = () => {
         resetError();
         setIsLoading(true);
@@ -23,6 +24,7 @@ function useMutation(mutation) {
       startExecution();
       try {
         const result = await mutation(...args);
+        console.log("resuklt", result);
         finishExecution(null);
         return result;
       } catch (error) {

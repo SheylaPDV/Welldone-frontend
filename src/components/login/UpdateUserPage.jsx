@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import useMutation from "../../hooks/useMutation";
 import storage from "../../utils/storage";
-import { useAuth } from "./context";
+// import { useAuth } from "./context";
 import { getUserId, modifyUser } from "./service";
 import UpdateUserForm from "./UpdateUserForm";
 import jwt_decode from "jwt-decode";
 import { useLocation, useNavigate } from "react-router-dom";
 
 export default function UpdateUserPage() {
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState();
   const location = useLocation();
   const navigate = useNavigate();
   const { execute } = useMutation(modifyUser);
@@ -20,8 +20,8 @@ export default function UpdateUserPage() {
     });
   };
 
-  var token = storage.get("auth");
-  var decoded = jwt_decode(token);
+  const token = storage.get("auth");
+  const decoded = jwt_decode(token);
   const { id } = decoded;
 
   useEffect(() => {
@@ -35,7 +35,7 @@ export default function UpdateUserPage() {
       <div>
         <h1>Users</h1>
         {users ? (
-          <UpdateUserForm key="id" onSubmit={handleSubmit} user={users} />
+          <UpdateUserForm onSubmit={handleSubmit} user={users} />
         ) : (
           <h1>There are no users</h1>
         )}
