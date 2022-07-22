@@ -6,6 +6,7 @@ import { getUserId, modifyUser } from "./service";
 import UpdateUserForm from "./UpdateUserForm";
 import jwt_decode from "jwt-decode";
 import { useLocation, useNavigate } from "react-router-dom";
+import "./updateUser.css";
 
 export default function UpdateUserPage() {
   const [users, setUsers] = useState();
@@ -33,7 +34,9 @@ export default function UpdateUserPage() {
   return (
     <>
       <div>
-        <h1>Users</h1>
+        <h1 className="about-you">
+          <i>About you..</i>
+        </h1>
         {users ? (
           <UpdateUserForm onSubmit={handleSubmit} user={users} />
         ) : (

@@ -1,5 +1,6 @@
 import useForm from "../../hooks/useForm";
 import "../layout/header/header.css";
+import "../login/auth/loginPage.css";
 import "./updateUser.css";
 export default function UpdateUserForm({ user, onSubmit }) {
   // const _id = user._id;
@@ -20,24 +21,38 @@ export default function UpdateUserForm({ user, onSubmit }) {
 
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)} className="loginPage">
-        <h4>Name:</h4>
-        <label>{user.name}</label>
+      <form className="update-form" onSubmit={handleSubmit(onSubmit)}>
+        <label>
+          <i>
+            <h4>Name: {user.name}</h4>
+          </i>
+        </label>
 
         {/* <input id="_id" value={user._id}></input> */}
         <input onChange={handleChange} name="name" value={name}></input>
 
-        <h4>Surname:</h4>
-        <label>{user.surname}</label>
+        <label>
+          <i>
+            {" "}
+            <h4>Surname: {user.surname}</h4>{" "}
+          </i>
+        </label>
         <input onChange={handleChange} name="surname" value={surname}></input>
 
-        <h4>Username:</h4>
-        <label>{user.username}</label>
+        <label>
+          <i>
+            <h4>Username: {user.username}</h4>
+            Your name appears on your Profile page, as your byline, and in your
+            responses. It is a required field.
+          </i>
+        </label>
 
         <input onChange={handleChange} name="username" value={username}></input>
-
-        <h4>Email:</h4>
-        <label>{user.email}</label>
+        <label>
+          <i>
+            <h4>Email: {user.email}</h4>
+          </i>
+        </label>
 
         <input onChange={handleChange} name="email" value={email}></input>
 
@@ -55,8 +70,8 @@ export default function UpdateUserForm({ user, onSubmit }) {
           name="password"
           value={newPassword}
         ></input> */}
-        <button className="button" type="onSubmit">
-          Edit
+        <button className="button-edit" type="onSubmit">
+          <i>Edit</i>
         </button>
       </form>
     </>

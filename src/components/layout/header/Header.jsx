@@ -18,10 +18,6 @@ function Header() {
       </NavLink>
 
       <nav className="header-nav">
-        <NavLink to="/new-articule">
-          <button className="button">Create Articule</button>
-        </NavLink>
-
         {/* <NavLink to="/login">
           <button className="button">Login</button>
         </NavLink> */}

@@ -16,22 +16,32 @@ function LogoutButton({ className }) {
     <>
       <NavLink to="/login">
         <button className={className} onClick={handleLogoutClick}>
-          Logout
+          <i>Logout</i>
         </button>
       </NavLink>
-      <NavLink to="/articules">
-        <button className="button-home">Home</button>
-      </NavLink>
-      <NavLink to="/new-story">
-        <button className="button-write">Write</button>
-      </NavLink>
-      <NavLink to="/settings">
-        <button className="button-write">Edit profile</button>
-      </NavLink>
+      <div className="buttons">
+        <NavLink to="/articules">
+          <button className="button-settings">
+            <i>Home</i>
+          </button>
+        </NavLink>
+        <NavLink to="/new-articule">
+          <button className="button-settings">
+            <i>Write</i>
+          </button>
+        </NavLink>
+        <NavLink to="/settings">
+          <button className="button-settings">
+            <i>Edit profile</i>
+          </button>
+        </NavLink>
+      </div>
     </>
   ) : (
     <NavLink to="/login">
-      <button className={className}>Login</button>
+      <button className={className}>
+        <i>Login</i>
+      </button>
     </NavLink>
   );
 }
