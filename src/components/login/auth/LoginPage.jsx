@@ -1,9 +1,9 @@
 import "./loginPage.css";
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { login } from "./service";
-import useMutation from "../../hooks/useMutation";
-import { useAuth } from "./context";
+import { login } from "../service";
+import useMutation from "../../../hooks/useMutation";
+import { useAuth } from "../context";
 import LoginForm from "./LoginForm";
 
 function LoginPage() {
@@ -25,7 +25,7 @@ function LoginPage() {
     <div>
       <LoginForm onSubmit={handleSubmit} />
       {isLoading && <p>Welldone..</p>}
-      {error && <div onClick={resetError}>{error.message}</div>}
+      {error && <div onClick={resetError}>{"Invalid email or username"}</div>}
     </div>
   );
 }

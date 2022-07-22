@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import useForm from "../../hooks/useForm";
-
+import "../login/auth/loginPage.css";
+import "../layout/header/header.css";
 function CreateUserForm({ onSubmit }) {
   const { t } = useTranslation();
   const {
@@ -68,13 +69,16 @@ function CreateUserForm({ onSubmit }) {
       <div className="input-group">
         <input
           className="input"
-          type="password"
+          // type="password"
           name="password"
           value={password}
           onChange={handleChange}
         />
         <span className="border"></span>
       </div>
+      <a href="/createdAccount">
+        <button className="button">Create Account</button>
+      </a>
 
       <button className="button-login">{t("createuser.create-account")}</button>
 

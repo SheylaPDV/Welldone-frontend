@@ -3,6 +3,7 @@ import CreateUserForm from "./CreateUserForm";
 import { useLocation, useNavigate } from "react-router-dom";
 import useMutation from "../../hooks/useMutation";
 import { createUser } from "./service";
+import "../login/auth/loginPage.css";
 
 function CreateUserPage() {
   const location = useLocation();
@@ -11,7 +12,7 @@ function CreateUserPage() {
 
   const handleSubmit = (credentials) => {
     execute(credentials).then(() => {
-      const from = location.state?.from?.pathname || "/createBlog";
+      const from = location.state?.from?.pathname || "/";
       navigate(from, { replace: true });
     });
   };
@@ -20,7 +21,7 @@ function CreateUserPage() {
     <div>
       <CreateUserForm onSubmit={handleSubmit} />
       {isLoading && <p>Welldone..</p>}
-      {error && <div onClick={resetError}>{error.message}</div>}
+      {error && <div onClick={resetError}>{"Invalid credentials"}</div>}
     </div>
   );
 }

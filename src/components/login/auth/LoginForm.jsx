@@ -1,3 +1,4 @@
+import "./loginPage.css";
 import useForm from "../../hooks/useForm";
 import "../layout/header/header.css";
 import { useTranslation } from "react-i18next";
@@ -68,7 +69,7 @@ function LoginForm({ onSubmit }) {
         />
 
         <button
-          className="button-login"
+          className="button"
           disabled={!validate(validEmail, validPassword)}
         >
           {t("login.login")}

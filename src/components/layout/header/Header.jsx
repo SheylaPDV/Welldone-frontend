@@ -2,8 +2,8 @@ import { t } from "i18next";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, NavLink } from "react-router-dom";
-import i18n from "../../../i18n";
-import LogoutButton from "../../login/LogoutButton";
+import i18n from "i18next";
+import LogoutButton from "../../login/auth/LogoutButton";
 import "./header.css";
 
 function Header() {
@@ -20,7 +20,10 @@ function Header() {
   };
   return (
     <header className="Header">
-      <NavLink to="/">
+      <NavLink
+        to="/"
+        style={({ isActive }) => (isActive ? { color: "green" } : null)}
+      >
         <h1 className="title-header">
           <i>{t("header.welldone")}</i>
         </h1>
@@ -31,10 +34,6 @@ function Header() {
       <button onClick={onChangeLanguage}>EN/ES</button>
 
       <nav className="header-nav">
-        <NavLink to="/new-articule">
-          <button className="button">{t("header.create-article")}</button>
-        </NavLink>
-
         {/* <NavLink to="/login">
           <button className="button">Login</button>
         </NavLink> */}

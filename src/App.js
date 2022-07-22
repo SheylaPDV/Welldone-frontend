@@ -6,7 +6,11 @@ import Footer from "./components/layout/footer/Footer.jsx";
 import Header from "./components/layout/header/Header.jsx";
 import { AuthContextProvider } from "./components/login/context.js";
 import CreateUserPage from "./components/login/CreateUserPage.jsx";
-import LoginPage from "./components/login/LoginPage.jsx";
+import LoginPage from "./components/login/auth/LoginPage.jsx";
+import CreatedAccount from "./utils/CreatedAccount.jsx";
+import UpdateUserPage from "./components/login/UpdateUserPage.jsx";
+// import UpdateUserPage from "./components/login/UpdateUserPage.jsx";
+
 function App({ isInitiallyLogged }) {
   const [isLogged, setIsLogged] = useState(isInitiallyLogged);
 
@@ -27,12 +31,12 @@ function App({ isInitiallyLogged }) {
           </Route>
           <Route path="/new-articule" element={<NewArticulePage />}></Route>
           <Route path="/createAccount" element={<CreateUserPage />} />
+          <Route path="/settings" element={<UpdateUserPage />} />
           <Route path="/login" element={<LoginPage onLogin={handleLogin} />} />
-
+          {/* <Route path="/createdAccount" element={<CreatedAccount />} /> */}
           <Route path="/404" element={<div> 404 | Not found Page</div>}></Route>
           <Route path="*" element={<Navigate to="/404" />}></Route>
         </Routes>
-        <Footer />
       </AuthContextProvider>
     </div>
   );

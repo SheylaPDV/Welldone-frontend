@@ -19,8 +19,20 @@ export const login = ({ remember, ...credentials }) => {
     });
 };
 
+export const getUsers = async () => {
+  return client.get("/v1/users");
+};
+
+export const getUserId = async (userId) => {
+  return client.get(`/v1/users/${userId}`);
+};
+
 export const createUser = async (newUser) => {
-  return client.post("/v1/user", newUser);
+  return client.post("/v1/users", newUser);
+};
+
+export const modifyUser = async (modify) => {
+  return client.put("/v1/users", modify);
 };
 export const logout = () => {
   return Promise.resolve().then(() => {

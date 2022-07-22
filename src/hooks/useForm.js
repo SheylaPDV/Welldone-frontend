@@ -10,6 +10,7 @@ const defaultGetValue = ({ value }) => value;
 
 function useForm(initialFormValue) {
   const [formValue, setFormValue] = useState(initialFormValue);
+  console.log("formValue", formValue);
 
   const updateFormValue = (name, value) => {
     setFormValue((currentFormValue) => ({
@@ -25,7 +26,9 @@ function useForm(initialFormValue) {
   };
 
   const handleSubmit = (onSubmit) => (ev) => {
+    console.log("handlesubmit,", ev);
     ev.preventDefault();
+
     onSubmit(formValue);
   };
 
