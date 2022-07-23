@@ -9,11 +9,13 @@ function NewArticuleForm({ onSubmit }) {
   } = useForm({
     title: "",
     content: "",
+    photo: ""
   });
-  const { title, content } = newArticule;
+  const { title, content} = newArticule;
+
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="articuleForm">
+    <form onSubmit={handleSubmit(onSubmit)} className="articuleForm" encType="multipart/form-data">
         <h2 className="articuleForm-title">What are you thinking?</h2>
         <label className="label-input">Title</label>
         <div className="input-group">
@@ -36,6 +38,14 @@ function NewArticuleForm({ onSubmit }) {
           onChange={handleChange}
         />
         <span className="border"></span>
+      </div>
+
+      <div>
+        <input 
+        name="photo" 
+        type="file"
+        onChange={handleChange}
+        />
       </div>
 
       <button>Create Articule</button>

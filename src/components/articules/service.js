@@ -9,5 +9,7 @@ export const getLastedArticules = async () => {
 
 export const createArticule = async (newArticule) => {
     const url = articuleBaseUrl;
-  return client.post(url, newArticule);
+  return client.post(url, newArticule, 
+    {headers: {'content-type': 'multipart/form-data'}}
+    );
 };

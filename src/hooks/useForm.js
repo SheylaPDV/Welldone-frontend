@@ -4,6 +4,8 @@ const getValueByType = {
   email: ({ value }) => value,
 
   password: ({ value }) => value,
+
+  photo: ({files}) => files[0]
 };
 
 const defaultGetValue = ({ value }) => value;
@@ -22,6 +24,7 @@ function useForm(initialFormValue) {
   const handleChange = (ev) => {
     console.log("handlechange", ev);
     const valueGetter = getValueByType[ev.target.name] || defaultGetValue;
+    console.log(valueGetter)
     updateFormValue(ev.target.name, valueGetter(ev.target));
   };
 
