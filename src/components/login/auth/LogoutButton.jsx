@@ -19,30 +19,32 @@ function LogoutButton({ className }) {
     <>
       <NavLink to="/login">
         <button className={className} onClick={handleLogoutClick}>
-          {t("logout.button")}
+          <i>{t("logout.button")}</i>
         </button>
       </NavLink>
       <div className="buttons">
         <NavLink to="/articules">
           <button className="button-settings">
-            <i>Home</i>
+            <i>{t("login.home")}</i>
           </button>
         </NavLink>
         <NavLink to="/new-articule">
           <button className="button-settings">
-            <i>Write</i>
+            <i>{t("login.write")}</i>
           </button>
         </NavLink>
         <NavLink to="/settings">
           <button className="button-settings">
-            <i>Edit profile</i>
+            <i>{t("login.edit")}</i>
           </button>
         </NavLink>
       </div>
     </>
   ) : (
     <NavLink to="/login">
-      <button className={className}>{t("login.button")}</button>
+      <button className={className}>
+        <i>{t("login.button")}</i>
+      </button>
     </NavLink>
   );
 }

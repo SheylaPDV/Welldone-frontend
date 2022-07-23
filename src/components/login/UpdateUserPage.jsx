@@ -7,8 +7,11 @@ import UpdateUserForm from "./UpdateUserForm";
 import jwt_decode from "jwt-decode";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./updateUser.css";
+import { useTranslation } from "react-i18next";
 
 export default function UpdateUserPage() {
+  const { t } = useTranslation();
+
   const [users, setUsers] = useState();
   const location = useLocation();
   const navigate = useNavigate();
@@ -35,12 +38,15 @@ export default function UpdateUserPage() {
     <>
       <div>
         <h1 className="about-you">
-          <i>About you..</i>
+          <i>{t("update.title")}</i>
         </h1>
+
+        <i className="about-you">{t("update.title2")}</i>
+
         {users ? (
           <UpdateUserForm onSubmit={handleSubmit} user={users} />
         ) : (
-          <h1>There are no users</h1>
+          <h1> {t("update.nousers")}</h1>
         )}
       </div>
     </>

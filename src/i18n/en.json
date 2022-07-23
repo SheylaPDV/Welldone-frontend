@@ -19,5 +19,22 @@
   "createuser.create-account": "Create account ",
   "createuser.help2": "Need help? ",
   "login.button": "Login ",
-  "logout.button": "Logout "
+  "logout.button": "Logout ",
+  "login.home": "Home ",
+  "login.write": "Write ",
+  "login.edit": "Edit profile ",
+  "update.password": "New password: ",
+  "update.password2": "Enter new password ",
+  "update.email": "Email: ",
+  "update.email2": "Enter a new email ",
+  "update.surname": "Surname: ",
+  "update.surname2": "Enter a new surname ",
+  "update.name": "Name: ",
+  "update.name2": "Enter a new name ",
+  "update.username": "Username: ",
+  "update.username2": "Your username appears on your Profile page, as your byline, and in your responses. It is a required field. ",
+  "update.edit": "Edit ",
+  "update.title": "About you.. ",
+  "update.title2": "You can edit your data here ",
+  "update.nousers": "There are no users "
 }
