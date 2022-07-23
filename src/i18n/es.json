@@ -19,5 +19,22 @@
   "createuser.create-account": "Crear cuenta ",
   "createuser.help2": "¿Necesitas ayuda? ",
   "login.button": "Iniciar sesión ",
-  "logout.button": "Cerrar sesión "
+  "logout.button": "Cerrar sesión ",
+  "login.home": "Hogar ",
+  "login.write": "Escribe ",
+  "login.edit": "Editar perfil ",
+  "update.password": "Nueva contraseña: ",
+  "update.password2": "Ingresar nueva contraseña ",
+  "update.email": "Correo electrónico: ",
+  "update.email2": "Ingrese un nuevo correo electrónico ",
+  "update.surname": "Apellidos: ",
+  "update.surname2": "Ingrese un nuevo apellido ",
+  "update.name": "Nombre: ",
+  "update.name2": "Ingrese un nuevo nombre ",
+  "update.username": "Nombre de usuario: ",
+  "update.username2": "Su nombre de usuario aparece en su página de perfil como su firma y en tus respuestas. Es un campo obligatorio. ",
+  "update.edit": "Editar ",
+  "update.title": "Acerca de ti.. ",
+  "update.title2": "Puedes editar tus datos aquí ",
+  "update.nousers": "No hay usuarios "
 }

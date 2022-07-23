@@ -31,7 +31,9 @@ function Header() {
           <i>{t("header.stay-curious")}</i>
         </h3>
       </NavLink>
-      <button onClick={onChangeLanguage}>EN/ES</button>
+      <button className="button-settings" onClick={onChangeLanguage}>
+        <i>EN/ES</i>
+      </button>
 
       <nav className="header-nav">
         {/* <NavLink to="/login">
