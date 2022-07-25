@@ -24,7 +24,6 @@ function useForm(initialFormValue) {
   const handleChange = (ev) => {
     console.log("handlechange", ev);
     const valueGetter = getValueByType[ev.target.name] || defaultGetValue;
-    console.log(valueGetter)
     updateFormValue(ev.target.name, valueGetter(ev.target));
   };
 

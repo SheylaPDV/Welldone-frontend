@@ -19,7 +19,7 @@
     margin-right: 25%;
     margin-left: 25%;
     font-size: 20px;
-    background-color: rgba(234, 242, 10, 0.1);
+    /* background-color: rgba(234, 242, 10, 0.1); */
 }
 
 .input-group {
@@ -75,4 +75,27 @@
 .input:focus+.border,
 .input:valid+.border {
     transform: scaleX(1);
+}
+
+.photo-label {
+   cursor: pointer;
+}
+
+.icon {
+    margin: 1rem;
+}
+
+.photo-input {
+    display: none;
+}
+
+.photo-text {
+    color: #15b110;
+}
+
+@media(max-width: 760px) {
+    .text-area {
+        min-width: 90vw;
+        max-width: 90vw;
+    }
 }
