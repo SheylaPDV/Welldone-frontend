@@ -89,6 +89,9 @@
     display: none;
 }
 
+.photo-text {
+    color: #15b110;
+}
 
 @media(max-width: 760px) {
     .text-area {

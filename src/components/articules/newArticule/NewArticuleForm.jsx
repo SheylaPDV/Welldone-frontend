@@ -1,5 +1,7 @@
 import useForm from "../../../hooks/useForm";
 import "./newArticule.css"
+import { useTranslation } from "react-i18next";
+
 
 function NewArticuleForm({ onSubmit }) {
   const {
@@ -13,11 +15,12 @@ function NewArticuleForm({ onSubmit }) {
   });
   const { title, content, photo} = newArticule;
 
+  const { t } = useTranslation();
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="articuleForm" encType="multipart/form-data">
-        <h2 className="articuleForm-title">What are you thinking?</h2>
-        <label className="label-input">Title</label>
+        <h2 className="articuleForm-title">{t("articuleForm.title")}</h2>
+        <label className="label-input">{t("newArticule.title")}</label>
         <div className="input-group">
         <input
           className="input"
@@ -28,10 +31,10 @@ function NewArticuleForm({ onSubmit }) {
         <span className="border"></span>
       </div>
 
-      <label className="label-input">Content</label>
+      <label className="label-input">{t("newArticule.content")}</label>
       <div className="input-group">
         <textarea
-        
+          maxlength="250"
           className="text-area"
           name="content"
           value={content}
@@ -43,19 +46,20 @@ function NewArticuleForm({ onSubmit }) {
       <div>
         <label htmlFor="photo" className="photo-label">
           <i className="fa fa-2x fa-camera icon"></i>
-          Select photo
+          {t("newArticule.photo")}
           <input 
           className="photo-input"
           id="photo" 
           name="photo" 
           type="file"
+          accept="image/*"
           onChange={handleChange}
           />
-          { photo?.name && <span className="photo-text">!!!Photo cargada</span> }
+          { photo && <span className="photo-text">{t("newArticule.loaded")}</span> }
         </label>
       </div>
 
-      <button className="button" >Create Articule</button>
+      <button className="button" >{t("newArticule.create")}</button>
     </form>
   )
 }

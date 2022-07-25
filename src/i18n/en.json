@@ -36,5 +36,15 @@
   "update.edit": "Edit ",
   "update.title": "About you.. ",
   "update.title2": "You can edit your data here ",
-  "update.nousers": "There are no users "
+  "update.nousers": "There are no users ",
+  "articule.title": "Articules",
+  "articuleForm.title": "What are you thinking?",
+  "newArticule.title": "Title",
+  "newArticule.content": "Content",
+  "newArticule.photo": "Select photo",
+  "newArticule.create" : "Create Articule",
+  "newArticule.loaded" : "!!!Photo Loaded"
+
+
+
 }
