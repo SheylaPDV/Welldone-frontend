@@ -11,7 +11,7 @@ function NewArticuleForm({ onSubmit }) {
     content: "",
     photo: ""
   });
-  const { title, content} = newArticule;
+  const { title, content, photo} = newArticule;
 
 
   return (
@@ -41,14 +41,21 @@ function NewArticuleForm({ onSubmit }) {
       </div>
 
       <div>
-        <input 
-        name="photo" 
-        type="file"
-        onChange={handleChange}
-        />
+        <label htmlFor="photo" className="photo-label">
+          <i className="fa fa-2x fa-camera icon"></i>
+          Select photo
+          <input 
+          className="photo-input"
+          id="photo" 
+          name="photo" 
+          type="file"
+          onChange={handleChange}
+          />
+          { photo?.name && <span className="photo-text">!!!Photo cargada</span> }
+        </label>
       </div>
 
-      <button>Create Articule</button>
+      <button className="button" >Create Articule</button>
     </form>
   )
 }

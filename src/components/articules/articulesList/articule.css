@@ -1,8 +1,45 @@
-.articule-box {
+
+.list-title {
+  width: 100%;
+  text-align: center;
+}
+
+.articule-list {
   display: flex;
-  background-color: rgb(244, 236, 90);
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2rem;
+  /* background-color: rgb(244, 236, 90); */
+  background-color: rgba(234, 242, 10, 0.1);
+  gap: 2rem;
+}
+
+.articule-box { 
+  display: flex;
   flex-direction: column;
-  font-size: 10px;
-  height: 700px;
   align-items: center;
+  width: 45%;
+  height: 400px;
+  width: 475px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+.articule-title {
+  font-size: 20px;
+}
+
+.articule-content {
+    font-size: 15px;
+    height: 100px;
+}
+
+.photo-text {
+  color: rgb(18, 68, 9);
+  margin-left: 1rem;
+}
+
+.articule-img {
+  width: 450px;
+  height: 200px;
+  border-radius: 10px;
 }

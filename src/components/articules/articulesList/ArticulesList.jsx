@@ -13,8 +13,8 @@ export default function ArticulesList() {
 
   return (
     <>
-      <div className="articule-box">
-        <h1>Articules</h1>
+        <h1 className="list-title">Articules</h1>
+        <div className="articule-list">
         {articules.length ? (
           articules.map((articule) => (
             <Articule key={articule.title} articule={articule} />
