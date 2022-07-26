@@ -1,4 +1,5 @@
 import client, {
+  configureClient,
   removeAuthorizationHeader,
   setAuthorizationHeader,
 } from "../../api/client";
@@ -8,7 +9,7 @@ export const login = ({ remember, ...credentials }) => {
   return client
     .post(`/v1/auth`, credentials)
     .then(({ accessToken }) => {
-      setAuthorizationHeader(accessToken);
+      configureClient({ accessToken });
       return accessToken;
     })
     .then((accessToken) => {

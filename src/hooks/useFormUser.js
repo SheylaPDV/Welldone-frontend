@@ -10,12 +10,21 @@ const getValueByType = {
 
 const defaultGetValue = ({ value }) => value;
 
-function useForm(initialFormValue) {
+function useFormUser(initialFormValue) {
   const [formValue, setFormValue] = useState(initialFormValue);
+  const [editedValues, setEditedValues] = useState();
   console.log("formValue", formValue);
+  console.log("editedValues", editedValues);
 
   const updateFormValue = (name, value) => {
     setFormValue((currentFormValue) => ({
+      ...currentFormValue,
+      [name]: value,
+    }));
+  };
+
+  const updateEditedValues = (name, value) => {
+    setEditedValues((currentFormValue) => ({
       ...currentFormValue,
       [name]: value,
     }));
@@ -26,12 +35,17 @@ function useForm(initialFormValue) {
     const valueGetter = getValueByType[ev.target.name] || defaultGetValue;
     console.log(valueGetter);
     updateFormValue(ev.target.name, valueGetter(ev.target));
+    updateEditedValues(ev.target.name, valueGetter(ev.target));
   };
 
   const handleSubmit = (onSubmit) => (ev) => {
     console.log("handlesubmit,", ev);
     ev.preventDefault();
-    onSubmit(formValue);
+    console.log("handlesubmit-initial,", initialFormValue);
+    editedValues._id = initialFormValue._id;
+    onSubmit(editedValues);
+    console.log("RESULT", ev);
+    // alert(result.msg);
   };
 
   const validate = (...validations) =>
@@ -48,4 +62,4 @@ function useForm(initialFormValue) {
   };
 }
 
-export default useForm;
+export default useFormUser;

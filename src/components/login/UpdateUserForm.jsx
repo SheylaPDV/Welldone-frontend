@@ -3,6 +3,7 @@ import "../layout/header/header.css";
 import "../login/auth/loginPage.css";
 import "./updateUser.css";
 import { useTranslation } from "react-i18next";
+import useFormUser from "../../hooks/useFormUser";
 
 export default function UpdateUserForm({ user, onSubmit }) {
   const { t } = useTranslation();
@@ -13,7 +14,7 @@ export default function UpdateUserForm({ user, onSubmit }) {
     formValue: modify,
     handleChange,
     handleSubmit,
-  } = useForm({
+  } = useFormUser({
     _id: user._id,
     name: user.name,
     surname: user.surname,
@@ -23,6 +24,7 @@ export default function UpdateUserForm({ user, onSubmit }) {
   });
 
   const { name, surname, username, email, password } = modify;
+  console.log(password);
 
   return (
     <>
@@ -78,12 +80,7 @@ export default function UpdateUserForm({ user, onSubmit }) {
           <h4>{t("update.password")}</h4>
           {t("update.password2")}
         </i>
-        <input
-          onChange={handleChange}
-          type="password"
-          name="password"
-          value={password}
-        ></input>
+        <input onChange={handleChange} type="password" name="password"></input>
         <button className="button-edit" type="onSubmit">
           <i>{t("update.edit")}</i>
         </button>
