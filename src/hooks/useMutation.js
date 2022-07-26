@@ -25,7 +25,7 @@ function useMutation(mutation) {
       try {
         const result = await mutation(...args);
         console.log("resuklt", result);
-        alert(result.msg);
+        //alert(result.msg);
         finishExecution(null);
         return result;
       } catch (error) {
