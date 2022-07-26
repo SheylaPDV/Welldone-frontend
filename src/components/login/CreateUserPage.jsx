@@ -4,10 +4,13 @@ import { useLocation, useNavigate } from "react-router-dom";
 import useMutation from "../../hooks/useMutation";
 import { createUser } from "./service";
 import "../login/auth/loginPage.css";
+import { useAuth } from "./context";
 
 function CreateUserPage() {
   const location = useLocation();
   const navigate = useNavigate();
+  const { handleLogin } = useAuth();
+
   const { isLoading, error, execute, resetError } = useMutation(createUser);
 
   const handleSubmit = (credentials) => {

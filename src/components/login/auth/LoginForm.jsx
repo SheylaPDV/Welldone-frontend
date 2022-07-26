@@ -17,9 +17,9 @@ function LoginForm({ onSubmit }) {
     email: "",
     username: "",
     password: "",
-    remember: false,
+    remember: true,
   });
-  const { username, email, password, remember } = credentials;
+  const { username, email, password } = credentials;
 
   return (
     <div className="loginPage">
@@ -59,14 +59,14 @@ function LoginForm({ onSubmit }) {
           <span className="border"></span>
         </div>
 
-        <label className="label-input">{t("login.remember-password")}</label>
-        <input
+        {/* <label className="label-input">{t("login.remember-password")}</label> */}
+        {/* <input
           className="label-input"
           type="checkbox"
           name="remember"
           checked={remember}
           onChange={handleChange}
-        />
+        /> */}
 
         <button
           className="button"

@@ -2,13 +2,12 @@ import { useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import ArticulesList from "./components/articules/articulesList/ArticulesList.jsx";
 import NewArticulePage from "./components/articules/newArticule/NewArticulePage.jsx";
-import Footer from "./components/layout/footer/Footer.jsx";
 import Header from "./components/layout/header/Header.jsx";
 import { AuthContextProvider } from "./components/login/context.js";
 import CreateUserPage from "./components/login/CreateUserPage.jsx";
 import LoginPage from "./components/login/auth/LoginPage.jsx";
-import CreatedAccount from "./utils/CreatedAccount.jsx";
 import UpdateUserPage from "./components/login/UpdateUserPage.jsx";
+import RequireAuth from "./components/login/RequireAuth";
 // import UpdateUserPage from "./components/login/UpdateUserPage.jsx";
 
 function App({ isInitiallyLogged }) {
@@ -27,13 +26,12 @@ function App({ isInitiallyLogged }) {
         <Routes>
           <Route path="/" element={<Navigate to="/articules" />}></Route>
           <Route path="/articules">
-            <Route index element={<ArticulesList></ArticulesList>}></Route>
+            <Route index element={<ArticulesList />}></Route>
           </Route>
           <Route path="/new-articule" element={<NewArticulePage />}></Route>
           <Route path="/createAccount" element={<CreateUserPage />} />
           <Route path="/settings" element={<UpdateUserPage />} />
           <Route path="/login" element={<LoginPage onLogin={handleLogin} />} />
-          {/* <Route path="/createdAccount" element={<CreatedAccount />} /> */}
           <Route path="/404" element={<div> 404 | Not found Page</div>}></Route>
           <Route path="*" element={<Navigate to="/404" />}></Route>
         </Routes>
