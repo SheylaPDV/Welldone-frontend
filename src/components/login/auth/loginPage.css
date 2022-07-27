@@ -20,11 +20,9 @@
   display: flex;
   flex-wrap: nowrap;
   padding: 30px;
-  /* margin-right: 25%; */
   margin-left: 700px;
   width: 200px;
   font-size: 20px;
-  /* background-color: rgba(234, 242, 10, 0.1); */
   align-items: flex-start;
   flex-direction: column;
 }
@@ -46,7 +44,7 @@
 .input:focus::placeholder {
   opacity: 0;
 }
-.border {
+.border2 {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -58,7 +56,7 @@
   transition: transform 0.25%;
 }
 
-.input:focus + .border,
-.input:valid + .border {
+.input:focus + .border2,
+.input:valid + .border2 {
   transform: scaleX(1);
 }

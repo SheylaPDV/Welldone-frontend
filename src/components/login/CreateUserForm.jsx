@@ -32,7 +32,7 @@ function CreateUserForm({ onSubmit }) {
           value={name}
           onChange={handleChange}
         />
-        <span className="border"></span>
+        <span className="border2"></span>
       </div>
 
       <label className="label-input">
@@ -45,7 +45,7 @@ function CreateUserForm({ onSubmit }) {
           value={surname}
           onChange={handleChange}
         />
-        <span className="border"></span>
+        <span className="border2"></span>
       </div>
       <label className="label-input">
         <i>{t("createuser.username")}</i>
@@ -58,7 +58,7 @@ function CreateUserForm({ onSubmit }) {
           value={username}
           onChange={handleChange}
         />
-        <span className="border"></span>
+        <span className="border2"></span>
       </div>
       <label className="label-input">
         <i>{t("createuser.email")}</i>
@@ -71,7 +71,7 @@ function CreateUserForm({ onSubmit }) {
           value={email}
           onChange={handleChange}
         />
-        <span className="border"></span>
+        <span className="border2"></span>
       </div>
 
       <label className="label-input">
@@ -86,7 +86,7 @@ function CreateUserForm({ onSubmit }) {
           value={password}
           onChange={handleChange}
         />
-        <span className="border"></span>
+        <span className="border2"></span>
       </div>
       <button className="button">
         <i>{t("createuser.create-account")}</i>

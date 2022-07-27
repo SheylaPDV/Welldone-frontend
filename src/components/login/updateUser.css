@@ -12,13 +12,13 @@ label {
 }
 input {
   margin-top: 10px;
-  background-color: rgba(218, 156, 64, 0.144);
+  background-color: rgba(255, 169, 39, 0.472);
   border: none;
   text-decoration: none;
   height: 30px;
 }
 .about-you {
-  color: rgb(18, 68, 9);
+  color: rgb(0, 0, 0);
   margin-left: 180px;
   display: flex;
   justify-content: flex-start;
