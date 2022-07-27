@@ -23,9 +23,13 @@ function LoginForm({ onSubmit }) {
 
   return (
     <div className="loginPage">
-      <h2 className="loginPage-title">{t("login.login-to-welldone")}</h2>
+      <h2 className="loginPage-title">
+        <i>{t("login.login-to-welldone")}</i>
+      </h2>
       <form className="loginForm" onSubmit={handleSubmit(onSubmit)}>
-        <label className="label-input">{t("login.email")}</label>
+        <label className="label-input">
+          <i>{t("login.email")}</i>
+        </label>
         <div className="input-group">
           <input
             className="input"
@@ -36,7 +40,9 @@ function LoginForm({ onSubmit }) {
           <span className="border"></span>
         </div>
 
-        <label className="label-input">{t("login.username")}</label>
+        <label className="label-input">
+          <i>{t("login.username")}</i>
+        </label>
         <div className="input-group">
           <input
             className="input"
@@ -47,7 +53,9 @@ function LoginForm({ onSubmit }) {
           <span className="border"></span>
         </div>
 
-        <label className="label-input">{t("login.password")}</label>
+        <label className="label-input">
+          <i>{t("login.password")}</i>
+        </label>
         <div className="input-group">
           <input
             className="input"
@@ -72,13 +80,17 @@ function LoginForm({ onSubmit }) {
           className="button"
           disabled={!validate(validEmail, validPassword)}
         >
-          {t("login.login")}
+          <i>{t("login.login")}</i>
         </button>
         <a href="/createAccount">
-          <h5>{t("login.create-account")}</h5>
+          <h5>
+            <i>{t("login.create-account")}</i>
+          </h5>
         </a>
         <a href="/LoginHelp">
-          <h5>{t("login.help")}</h5>
+          <h5>
+            <i>{t("login.help")}</i>
+          </h5>
         </a>
       </form>
     </div>

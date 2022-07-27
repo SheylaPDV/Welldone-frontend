@@ -90,7 +90,7 @@ export default function UpdateUserForm({ user, onSubmit, onSubmitDelete }) {
           id="delete"
           onClick={handleSubmitDelete(onSubmitDelete)}
         >
-          <i>BORRAR</i>
+          <i>{t("update.delete")}</i>
         </button>
       </form>
     </>

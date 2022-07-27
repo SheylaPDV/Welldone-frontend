@@ -42,7 +42,7 @@
   "newArticule.title": "Título",
   "newArticule.content": "Contenido",
   "newArticule.photo": "Selecciona una foto",
-  "newArticule.create" : "Crear artículo",
-  "newArticule.loaded" : "!!!foto cargada"
-
+  "newArticule.create": "Crear artículo",
+  "newArticule.loaded": "!!!foto cargada",
+  "update.delete": "Borrar cuenta "
 }
