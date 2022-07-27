@@ -18,7 +18,7 @@
   "createuser.password": "Contraseña ",
   "createuser.create-account": "Crear cuenta ",
   "createuser.help2": "¿Necesitas ayuda? ",
-  "login.button": "Iniciar sesión ",
+  "login.button": "Empezar ",
   "logout.button": "Cerrar sesión ",
   "login.home": "Hogar ",
   "login.write": "Escribe ",
@@ -37,12 +37,13 @@
   "update.title": "Acerca de ti.. ",
   "update.title2": "Puedes editar tus datos aquí ",
   "update.nousers": "No hay usuarios ",
-  "articule.title": "Artículos",
+  "articule.title": "TENDENCIA EN WELLDONE ",
   "articuleForm.title": "Que estas pensando?",
   "newArticule.title": "Título",
   "newArticule.content": "Contenido",
   "newArticule.photo": "Selecciona una foto",
-  "newArticule.create": "Crear artículo",
+  "newArticule.create": "Publicar ",
   "newArticule.loaded": "!!!foto cargada",
-  "update.delete": "Borrar cuenta "
+  "update.delete": "Borrar cuenta ",
+  "header.parrafo": "Descubra historias, pensamientos y experiencia de escritores sobre cualquier tema. "
 }

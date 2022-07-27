@@ -22,12 +22,13 @@ function App({ isInitiallyLogged }) {
   return (
     <div className="App">
       <AuthContextProvider value={{ isLogged, handleLogin, handleLogout }}>
-        <Header />
+        <Header/>
         <Routes>
           <Route path="/" element={<Navigate to="/articules" />}></Route>
           <Route path="/articules">
             <Route index element={<ArticulesList />}></Route>
           </Route>
+
           <Route path="/new-articule" element={<NewArticulePage />}></Route>
           <Route path="/createAccount" element={<CreateUserPage />} />
           <Route path="/settings" element={<UpdateUserPage />} />

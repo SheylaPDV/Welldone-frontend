@@ -37,7 +37,7 @@ function LoginForm({ onSubmit }) {
             value={email}
             onChange={handleChange}
           />
-          <span className="border"></span>
+          <span className="border2"></span>
         </div>
 
         <label className="label-input">
@@ -50,7 +50,7 @@ function LoginForm({ onSubmit }) {
             value={username}
             onChange={handleChange}
           />
-          <span className="border"></span>
+          <span className="border2"></span>
         </div>
 
         <label className="label-input">
@@ -64,7 +64,7 @@ function LoginForm({ onSubmit }) {
             value={password}
             onChange={handleChange}
           />
-          <span className="border"></span>
+          <span className="border2"></span>
         </div>
 
         {/* <label className="label-input">{t("login.remember-password")}</label> */}

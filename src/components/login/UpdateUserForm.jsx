@@ -82,11 +82,11 @@ export default function UpdateUserForm({ user, onSubmit, onSubmitDelete }) {
           {t("update.password2")}
         </i>
         <input onChange={handleChange} type="password" name="password"></input>
-        <button className="button-edit" name="edit" type="onSubmit">
+        <button className="button" name="edit" type="onSubmit">
           <i>{t("update.edit")}</i>
         </button>
         <button
-          className="button-edit"
+          className="button"
           id="delete"
           onClick={handleSubmitDelete(onSubmitDelete)}
         >

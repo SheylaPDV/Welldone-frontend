@@ -5,6 +5,8 @@ import { Link, NavLink } from "react-router-dom";
 import i18n from "i18next";
 import LogoutButton from "../../login/auth/LogoutButton";
 import "./header.css";
+import usuario from "../../../public/images/usuarios.png";
+import search from "../../../public/images/busqueda.png";
 
 function Header() {
   const { t } = useTranslation();
@@ -20,31 +22,31 @@ function Header() {
   };
   return (
     <header className="Header">
-      <NavLink
-        to="/"
-        style={({ isActive }) => (isActive ? { color: "green" } : null)}
-      >
-        <h1 className="title-header">
-          <i>{t("header.welldone")}</i>
-        </h1>
-        <h3 className="title-header2">
-          <i>{t("header.stay-curious")}</i>
-        </h3>
-      </NavLink>
-      <button className="button-settings" onClick={onChangeLanguage}>
-        <i>EN/ES</i>
-      </button>
-
-      <nav className="header-nav">
-        {/* <NavLink to="/login">
-          <button className="button">Login</button>
-        </NavLink> */}
-        <LogoutButton className="button" />
-
-        {/* <NavLink to="/adverts/blog">
-          <button className="button">create Account</button>
-        </NavLink> */}
-      </nav>
+      <div className="Header2">
+        {" "}
+        <img src={usuario} />
+        <NavLink to="/">
+          <h1 className="title-header">{t("header.welldone")}</h1>
+          <h3 className="title-header2">
+            <i>{t("header.stay-curious")}</i>
+          </h3>
+        </NavLink>
+        <a className="button-settings" onClick={onChangeLanguage}>
+          <i>EN/ES</i>
+        </a>
+        <nav className="header-nav">
+          <LogoutButton className="button" />
+        </nav>
+        <input placeholder="Search" className="search" type="search" />
+        <img className="search1" src={search} />
+      </div>
+      <div className="Header3">
+        <h2 className="title-staycurious">Stay curious.</h2>
+        <h5 className="parrafo">{t("header.parrafo")}</h5>{" "}
+        <nav className="header-nav">
+          <LogoutButton className="button" />
+        </nav>
+      </div>
     </header>
   );
 }

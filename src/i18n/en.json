@@ -18,7 +18,7 @@
   "createuser.password": "Password ",
   "createuser.create-account": "Create account ",
   "createuser.help2": "Need help? ",
-  "login.button": "Login ",
+  "login.button": "Get started ",
   "logout.button": "Logout ",
   "login.home": "Home ",
   "login.write": "Write ",
@@ -37,12 +37,13 @@
   "update.title": "About you.. ",
   "update.title2": "You can edit your data here ",
   "update.nousers": "There are no users ",
-  "articule.title": "Articules",
+  "articule.title": "TRENDING ON WELLDONE ",
   "articuleForm.title": "What are you thinking?",
   "newArticule.title": "Title",
   "newArticule.content": "Content",
   "newArticule.photo": "Select photo",
-  "newArticule.create": "Create Articule",
+  "newArticule.create": "Publish ",
   "newArticule.loaded": "!!!Photo Loaded ",
-  "update.delete": "Delete account "
+  "update.delete": "Delete account ",
+  "header.parrafo": "Discover stories, thinking, and expertise from writers on any topic. "
 }
