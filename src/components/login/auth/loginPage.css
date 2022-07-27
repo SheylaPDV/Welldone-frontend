@@ -1,14 +1,15 @@
 .loginPage-title {
   display: flex;
-  flex-wrap: nowrap;
   width: 229%;
   flex-direction: row;
+  justify-content: space-around;
 }
 
 .loginForm {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 .label-input {
   margin-top: 20px;
@@ -18,13 +19,10 @@
 }
 .loginPage {
   display: flex;
-  flex-wrap: nowrap;
-  padding: 30px;
-  margin-left: 700px;
-  width: 200px;
-  font-size: 20px;
-  align-items: flex-start;
+
+  align-items: center;
   flex-direction: column;
+  flex-wrap: nowrap;
 }
 .input-group {
   position: relative;
