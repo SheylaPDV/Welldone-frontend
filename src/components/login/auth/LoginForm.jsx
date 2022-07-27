@@ -22,11 +22,11 @@ function LoginForm({ onSubmit }) {
   const { username, email, password } = credentials;
 
   return (
-    <div className="loginPage">
-      <h2 className="loginPage-title">
-        <i>{t("login.login-to-welldone")}</i>
-      </h2>
+    <div>
       <form className="loginForm" onSubmit={handleSubmit(onSubmit)}>
+        <h2 className="loginPage-title">
+          <i>{t("login.login-to-welldone")}</i>
+        </h2>
         <label className="label-input">
           <i>{t("login.email")}</i>
         </label>
@@ -66,15 +66,6 @@ function LoginForm({ onSubmit }) {
           />
           <span className="border2"></span>
         </div>
-
-        {/* <label className="label-input">{t("login.remember-password")}</label> */}
-        {/* <input
-          className="label-input"
-          type="checkbox"
-          name="remember"
-          checked={remember}
-          onChange={handleChange}
-        /> */}
 
         <button
           className="button"
