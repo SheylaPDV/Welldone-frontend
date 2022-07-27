@@ -27,18 +27,21 @@ function Header() {
         <img src={usuario} />
         <NavLink to="/">
           <h1 className="title-header">{t("header.welldone")}</h1>
+
           <h3 className="title-header2">
-            <i>{t("header.stay-curious")}</i>
+            <i>{t("header.stay-curious")}</i>{" "}
           </h3>
         </NavLink>
+        <div className="box-search">
+          <input placeholder="Search" className="search" type="search"></input>
+          <img className="search1" src={search} />
+        </div>
         <a className="button-settings" onClick={onChangeLanguage}>
           <i>EN/ES</i>
         </a>
         <nav className="header-nav">
           <LogoutButton className="button" />
         </nav>
-        <input placeholder="Search" className="search" type="search" />
-        <img className="search1" src={search} />
       </div>
       <div className="Header3">
         <h2 className="title-staycurious">Stay curious.</h2>
