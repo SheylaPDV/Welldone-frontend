@@ -1,9 +1,8 @@
 .loginPage-title {
   display: flex;
-  flex-direction: column;
   flex-wrap: nowrap;
-  align-items: center;
-  width: 50%;
+  width: 229%;
+  flex-direction: row;
 }
 
 .loginForm {
@@ -13,27 +12,30 @@
 }
 .label-input {
   margin-top: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
 }
 .loginPage {
   display: flex;
-  flex-direction: column;
   flex-wrap: nowrap;
   padding: 30px;
-  align-items: center;
-  margin-right: 25%;
-  margin-left: 25%;
+  /* margin-right: 25%; */
+  margin-left: 700px;
+  width: 200px;
   font-size: 20px;
   /* background-color: rgba(234, 242, 10, 0.1); */
+  align-items: flex-start;
+  flex-direction: column;
 }
 .input-group {
   position: relative;
 }
 .input {
   font: inherit;
-  color: rgb(0, 0, 0);
+
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid rgb(0, 0, 0);
   outline: none;
   padding-block: 5px;
 }
@@ -48,9 +50,9 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 100%;
+  width: 200%;
   height: 2px;
-  background-color: #434337;
+  background-color: #4343375c;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.25%;

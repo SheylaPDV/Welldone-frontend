@@ -42,9 +42,7 @@
   "newArticule.title": "Title",
   "newArticule.content": "Content",
   "newArticule.photo": "Select photo",
-  "newArticule.create" : "Create Articule",
-  "newArticule.loaded" : "!!!Photo Loaded"
-
-
-
+  "newArticule.create": "Create Articule",
+  "newArticule.loaded": "!!!Photo Loaded ",
+  "update.delete": "Delete account "
 }

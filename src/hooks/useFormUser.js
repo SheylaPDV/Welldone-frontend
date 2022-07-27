@@ -41,11 +41,14 @@ function useFormUser(initialFormValue) {
   const handleSubmit = (onSubmit) => (ev) => {
     console.log("handlesubmit,", ev);
     ev.preventDefault();
-    console.log("handlesubmit-initial,", initialFormValue);
     editedValues._id = initialFormValue._id;
     onSubmit(editedValues);
-    console.log("RESULT", ev);
-    // alert(result.msg);
+  };
+
+  const handleSubmitDelete = (onSubmitDelete) => (ev) => {
+    console.log("handleSubmitDelete,", ev);
+    ev.preventDefault();
+    onSubmitDelete(formValue._id);
   };
 
   const validate = (...validations) =>
@@ -58,6 +61,7 @@ function useFormUser(initialFormValue) {
     setFormValue,
     handleChange,
     handleSubmit,
+    handleSubmitDelete,
     validate,
   };
 }

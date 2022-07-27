@@ -19,8 +19,12 @@ function CreateUserForm({ onSubmit }) {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="loginPage">
-      <h2 className="loginPage-title">{t("createuser.title")}</h2>
-      <label className="label-input">{t("createuser.name")}</label>
+      <h2 className="loginPage-title">
+        <i>{t("createuser.title")}</i>
+      </h2>
+      <label className="label-input">
+        <i>{t("createuser.name")}</i>
+      </label>
       <div className="input-group">
         <input
           className="input"
@@ -31,7 +35,9 @@ function CreateUserForm({ onSubmit }) {
         <span className="border"></span>
       </div>
 
-      <label className="label-input">{t("createuser.surname")}</label>
+      <label className="label-input">
+        <i>{t("createuser.surname")}</i>
+      </label>
       <div className="input-group">
         <input
           className="input"
@@ -41,7 +47,9 @@ function CreateUserForm({ onSubmit }) {
         />
         <span className="border"></span>
       </div>
-      <label className="label-input">{t("createuser.username")}</label>
+      <label className="label-input">
+        <i>{t("createuser.username")}</i>
+      </label>
 
       <div className="input-group">
         <input
@@ -52,7 +60,9 @@ function CreateUserForm({ onSubmit }) {
         />
         <span className="border"></span>
       </div>
-      <label className="label-input">{t("createuser.email")}</label>
+      <label className="label-input">
+        <i>{t("createuser.email")}</i>
+      </label>
       <div className="input-group">
         <input
           className="input"
@@ -64,7 +74,9 @@ function CreateUserForm({ onSubmit }) {
         <span className="border"></span>
       </div>
 
-      <label className="label-input">{t("createuser.password")}</label>
+      <label className="label-input">
+        <i>{t("createuser.password")}</i>
+      </label>
 
       <div className="input-group">
         <input
@@ -81,7 +93,10 @@ function CreateUserForm({ onSubmit }) {
       </button>
 
       <a href="/LoginHelp">
-        <h5> {t("createuser.help2")}</h5>
+        <h5>
+          {" "}
+          <i>{t("createuser.help2")}</i>
+        </h5>
       </a>
     </form>
   );

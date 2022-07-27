@@ -27,6 +27,10 @@ export const getUsers = async () => {
 export const getUserId = async (userId) => {
   return client.get(`/v1/users/${userId}`);
 };
+export const deleteUserId = async (userId) => {
+  console.log("USERID:",userId);
+  return client.delete(`/v1/users/${userId}`);
+};
 
 export const createUser = async (newUser) => {
   return client.post("/v1/users", newUser);

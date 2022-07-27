@@ -5,7 +5,7 @@ import "./updateUser.css";
 import { useTranslation } from "react-i18next";
 import useFormUser from "../../hooks/useFormUser";
 
-export default function UpdateUserForm({ user, onSubmit }) {
+export default function UpdateUserForm({ user, onSubmit, onSubmitDelete }) {
   const { t } = useTranslation();
 
   // const _id = user._id;
@@ -14,6 +14,7 @@ export default function UpdateUserForm({ user, onSubmit }) {
     formValue: modify,
     handleChange,
     handleSubmit,
+    handleSubmitDelete,
   } = useFormUser({
     _id: user._id,
     name: user.name,
@@ -81,8 +82,15 @@ export default function UpdateUserForm({ user, onSubmit }) {
           {t("update.password2")}
         </i>
         <input onChange={handleChange} type="password" name="password"></input>
-        <button className="button-edit" type="onSubmit">
+        <button className="button-edit" name="edit" type="onSubmit">
           <i>{t("update.edit")}</i>
+        </button>
+        <button
+          className="button-edit"
+          id="delete"
+          onClick={handleSubmitDelete(onSubmitDelete)}
+        >
+          <i>{t("update.delete")}</i>
         </button>
       </form>
     </>
