@@ -14,7 +14,6 @@ export default function ArticulesList() {
       setArticules(data.result);
     });
   }, []);
-
   return (
     <>
       <h1 className="list-title">

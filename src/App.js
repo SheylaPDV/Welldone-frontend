@@ -7,6 +7,7 @@ import { AuthContextProvider } from "./components/login/context.js";
 import CreateUserPage from "./components/login/CreateUserPage.jsx";
 import LoginPage from "./components/login/auth/LoginPage.jsx";
 import UpdateUserPage from "./components/login/UpdateUserPage.jsx";
+import ArticleDetail from "../src/components/articules/articulesList/ArticleDetail";
 import RequireAuth from "./components/login/RequireAuth";
 // import UpdateUserPage from "./components/login/UpdateUserPage.jsx";
 
@@ -22,7 +23,7 @@ function App({ isInitiallyLogged }) {
   return (
     <div className="App">
       <AuthContextProvider value={{ isLogged, handleLogin, handleLogout }}>
-        <Header/>
+        <Header />
         <Routes>
           <Route path="/" element={<Navigate to="/articules" />}></Route>
           <Route path="/articules">
@@ -30,6 +31,7 @@ function App({ isInitiallyLogged }) {
           </Route>
 
           <Route path="/new-articule" element={<NewArticulePage />}></Route>
+          <Route path="/articleDetail" element={<ArticleDetail />} />
           <Route path="/createAccount" element={<CreateUserPage />} />
           <Route path="/settings" element={<UpdateUserPage />} />
           <Route path="/login" element={<LoginPage onLogin={handleLogin} />} />
