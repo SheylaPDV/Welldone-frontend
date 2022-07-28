@@ -10,6 +10,13 @@ img {
   color: #000;
   margin-right: 20px;
 }
+.parrafo {
+  display: flex;
+}
+.detail {
+  display: flex;
+  cursor: pointer;
+}
 
 .articule-list {
   display: flex;
@@ -40,13 +47,28 @@ img {
   height: 100px;
   width: 450px;
 }
+.article {
+  border: solid 1px rgba(172, 158, 33, 0.741);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
 
 .photo-text {
   color: rgb(18, 68, 9);
   margin-left: 1rem;
 }
+.img-article {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin: 0;
+  height: 276px;
+}
 
 .articule-img {
+  display: flex;
   width: 450px;
   height: 200px;
   border-radius: 10px;
