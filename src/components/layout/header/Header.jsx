@@ -1,54 +1,14 @@
 import { t } from "i18next";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import i18n from "i18next";
 import LogoutButton from "../../login/auth/LogoutButton";
 import "./header.css";
 import usuario from "../../../public/images/usuarios.png";
 import search from "../../../public/images/busqueda.png";
-import axios from "axios";
-import { useEffect } from "react";
 
 function Header() {
-  const [articles, setArticles] = useState([]);
-  const [users, setUsers] = useState([]);
-  const [busqueda, setBusqueda] = useState("");
-
-  const peticionGet = async () => {
-    await axios
-      .get("api/v1/articules")
-      .then((res) => {
-        setUsers(res.data);
-        setArticles(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-  const handleChange = (e) => {
-    setBusqueda(e.target.value);
-    filtrar(e.target.value);
-  };
-
-  const filtrar = (terminoBusqueda) => {
-    var resultadoBusqueda = setArticles.filter((elemento) => {
-      if (
-        elemento.name
-          .toString()
-          .toLowerCase()
-          .includes(terminoBusqueda.toLowerCase())
-      ) {
-        return elemento;
-      }
-    });
-    setUsers(resultadoBusqueda);
-  };
-
-  useEffect(() => {
-    peticionGet();
-  }, []);
-
   const { t } = useTranslation();
 
   const [language, setLanguage] = useState("es");
@@ -73,12 +33,7 @@ function Header() {
           </h3>
         </NavLink>
         <div className="box-search">
-          <input
-            onChange={handleChange}
-            placeholder="Search"
-            className="search"
-            type="search"
-          ></input>
+          <input placeholder="Search" className="search" type="search"></input>
           <img className="search1" src={search} />
         </div>
         <a className="button-settings" onClick={onChangeLanguage}>
